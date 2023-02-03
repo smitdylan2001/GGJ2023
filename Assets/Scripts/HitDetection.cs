@@ -8,4 +8,9 @@ public class HitDetection : MonoBehaviour
     {
         Destroy(other.gameObject);
     }
+
+    private void OnTriggerStay(Collider other)
+    {
+        
+    }
 }
