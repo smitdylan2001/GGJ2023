@@ -27,11 +27,6 @@ public class GameManager : MonoBehaviour
         audioSource.Play();
         yield return new WaitForSeconds(time);
 
-        while (audioSource.isPlaying)
-        {
-            yield return null;
-        }
-
         NoteManager.Instance.enabled = false;
         endScreen.SetActive(true);
     }
