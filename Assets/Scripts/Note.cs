@@ -27,7 +27,8 @@ public class Note : MonoBehaviour
 
     private void OnDisable()
     {
-
+        timer = 0;
+        col.enabled = false;
     }
 
     // Update is called once per frame

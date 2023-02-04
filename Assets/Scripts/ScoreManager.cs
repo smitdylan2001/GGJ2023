@@ -9,7 +9,7 @@ public class ScoreManager : MonoBehaviour
     public int Score { get; private set; }  
 
     [SerializeField] private TMP_Text rHandText, lHandText;
-
+    int multiplier = 1;
     private void Awake()
     {
         Instance= this;
@@ -27,7 +27,11 @@ public class ScoreManager : MonoBehaviour
         Score += addition;
         UpdateScoreText();
 
-        if (Score >= 2000) NoteManager.Instance.GoToNextScene();
+        if (Score >= 2000 * multiplier)
+        {
+            NoteManager.Instance.GoToNextScene();
+            multiplier++;
+        }
     }
 
     private void UpdateScoreText()

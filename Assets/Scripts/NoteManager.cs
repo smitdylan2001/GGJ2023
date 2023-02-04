@@ -45,7 +45,6 @@ public class NoteManager : MonoBehaviour
         foreach (GameObject go in possibleSpawnsL) go.SetActive(false);
     }
 
-    // Update is called once per frame
     void Update()
     {
         timer += Time.deltaTime;
@@ -72,19 +71,20 @@ public class NoteManager : MonoBehaviour
     public void GoToNextScene()
     {
         currentScene = (currentScene + 1) % timelines.Slices.Length;
+        currentBeat = 0;
     }
 
     private void SpawnObjectR(GameObject obj, Quaternion rot)
     {
         obj.SetActive(true);
-        //obj.transform.rotation = rot;
+        obj.transform.rotation = rot;
         AvailableSpawnsR.Remove(obj);
     }
 
     private void SpawnObjectL(GameObject obj, Quaternion rot)
     {
         obj.SetActive(true);
-       //obj.transform.rotation = rot;
+       obj.transform.rotation = rot;
         AvailableSpawnsL.Remove(obj);
     }
 

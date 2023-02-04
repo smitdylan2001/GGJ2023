@@ -181,5 +181,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: PS_HandPrompt
       objectReference: {fileID: 0}
+    - target: {fileID: 8534355155920410275, guid: 50d347fe92dc8e348a298ea097644d6a, type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 1.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534355155920410275, guid: 50d347fe92dc8e348a298ea097644d6a, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].time
+      value: 0.42027494
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534355155920410275, guid: 50d347fe92dc8e348a298ea097644d6a, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inSlope
+      value: 3.6278222
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534355155920410275, guid: 50d347fe92dc8e348a298ea097644d6a, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].inWeight
+      value: 0.1831415
+      objectReference: {fileID: 0}
+    - target: {fileID: 8534355155920410275, guid: 50d347fe92dc8e348a298ea097644d6a, type: 3}
+      propertyPath: SizeModule.curve.maxCurve.m_Curve.Array.data[1].outSlope
+      value: 3.6278222
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50d347fe92dc8e348a298ea097644d6a, type: 3}
