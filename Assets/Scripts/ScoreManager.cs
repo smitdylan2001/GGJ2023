@@ -8,7 +8,7 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager Instance { get; private set; }
     public int Score { get; private set; }  
 
-    [SerializeField] private TMP_Text rHandText, lHandText;
+    [SerializeField] private TMP_Text rHandText, lHandText, endText;
     int multiplier = 1;
     private void Awake()
     {
@@ -39,5 +39,6 @@ public class ScoreManager : MonoBehaviour
         var text = Score.ToString();
         rHandText.text = text;
         lHandText.text = text;
+        endText.text = "SCORE:\n" + text + "\n\nRESTART";
     }
 }
