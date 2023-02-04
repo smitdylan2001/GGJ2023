@@ -18,7 +18,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2482611524062393268
 Transform:
   m_ObjectHideFlags: 0
@@ -543,11 +543,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b657b0bde2cccec44ae048987bb1c363, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.8755337
+      value: -1.203
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b657b0bde2cccec44ae048987bb1c363, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.57363874
+      value: -0.574
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: b657b0bde2cccec44ae048987bb1c363, type: 3}
       propertyPath: m_LocalPosition.z
@@ -657,7 +657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 0e38433e663f5154a83c2c052010fe9d, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e38433e663f5154a83c2c052010fe9d, type: 3}
@@ -795,6 +795,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cashier_Can
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c5028f56a4ddcb44cab1ba23495daf88, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c5028f56a4ddcb44cab1ba23495daf88, type: 3}
 --- !u!4 &6111929977222477346 stripped
@@ -925,7 +929,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e5d1f86c9161c64499f3db593cc18b55, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e5d1f86c9161c64499f3db593cc18b55, type: 3}
