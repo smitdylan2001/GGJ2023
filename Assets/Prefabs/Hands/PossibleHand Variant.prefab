@@ -112,6 +112,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   IsRight: 0
+  col: {fileID: 8084627155098890805}
+--- !u!64 &8084627155098890805 stripped
+MeshCollider:
+  m_CorrespondingSourceObject: {fileID: 3795821329905853950, guid: f5c7e4627862a1145b6bbe3cb41368ab, type: 3}
+  m_PrefabInstance: {fileID: 4944718140497385419}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &8018897469399122992
 PrefabInstance:
   m_ObjectHideFlags: 0

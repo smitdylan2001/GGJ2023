@@ -6,9 +6,9 @@ using UnityEngine;
 public struct TimeSlice
 {
     public GameObject SpawnPositionR;
-    public Quaternion RotationR;
+    public Vector3 RotationR;
     public GameObject SpawnPositionL;
-    public Quaternion RotationL;
+    public Vector3 RotationL;
 }
 
 [System.Serializable]

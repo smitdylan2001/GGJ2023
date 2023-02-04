@@ -58,14 +58,14 @@ public class NoteManager : MonoBehaviour
             var item = slice.SpawnPositionR;
             var rot = slice.RotationR;
 
-            if(item) SpawnObjectR(item, rot);
+            if(item) SpawnObjectR(item, Quaternion.Euler(rot));
 
             item = slice.SpawnPositionL;
             rot = slice.RotationL;
 
-            if (item) SpawnObjectL(item, rot);
+            if (item) SpawnObjectL(item, Quaternion.Euler(rot));
 
-            currentBeat++;
+            currentBeat = (currentBeat + 1) % timelines.Slices[currentScene].TimeSlices.Length;
         }
     }
 
