@@ -377,6 +377,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PS_HandPrompt
       objectReference: {fileID: 0}
+    - target: {fileID: 4456703607006626020, guid: 50d347fe92dc8e348a298ea097644d6a, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 50d347fe92dc8e348a298ea097644d6a, type: 3}
 --- !u!1001 &1432963295
@@ -433,6 +437,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 8184d8e0029f3714999b4d7209383fe7, type: 3}
       propertyPath: m_Name
       value: FoamHand (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8184d8e0029f3714999b4d7209383fe7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8184d8e0029f3714999b4d7209383fe7, type: 3}
@@ -552,6 +560,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PS_PerfectScore
       objectReference: {fileID: 0}
+    - target: {fileID: 1269605589567378445, guid: 2528050ffda6a1340b5f12e318383953, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2528050ffda6a1340b5f12e318383953, type: 3}
 --- !u!1001 &2482611524302135146
@@ -611,7 +623,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2482611524534221627, guid: bf75d7a924743a54fafdb8a3ec25817c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf75d7a924743a54fafdb8a3ec25817c, type: 3}
@@ -625,6 +637,10 @@ PrefabInstance:
     - target: {fileID: 5613099952503466953, guid: 66d7fecbe217ebc45976113feff38d68, type: 3}
       propertyPath: m_Name
       value: PS_OKScore
+      objectReference: {fileID: 0}
+    - target: {fileID: 5613099952503466953, guid: 66d7fecbe217ebc45976113feff38d68, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5613099952503466954, guid: 66d7fecbe217ebc45976113feff38d68, type: 3}
       propertyPath: m_RootOrder
