@@ -1945,7 +1945,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dfd551d31d93b54a802c465b23d032e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Slices: []
+  Slices:
+  - Name: Cashier
+    TimeSlices:
+    - SpawnPositionR: {fileID: 0}
+      RotationR: {x: 0, y: 0, z: 0, w: 0}
+      SpawnPositionL: {fileID: 0}
+      RotationL: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &2038386304 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3455976904445671593, guid: b7484bd5e94260d409c26880e39322bf, type: 3}

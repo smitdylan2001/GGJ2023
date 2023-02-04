@@ -14,6 +14,7 @@ public struct TimeSlice
 [System.Serializable]
 public struct Slices
 {
+    public string Name;
     public TimeSlice[] TimeSlices;
 }
 

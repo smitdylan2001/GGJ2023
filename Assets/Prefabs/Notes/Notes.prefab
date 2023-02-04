@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1369598362833350490}
+  - component: {fileID: 2032129817}
   m_Layer: 0
   m_Name: Notes
   m_TagString: Untagged
@@ -33,6 +34,25 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2032129817
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1369598362833350485}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dfd551d31d93b54a802c465b23d032e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Slices:
+  - Name: Cashier
+    TimeSlices:
+    - SpawnPositionR: {fileID: 0}
+      RotationR: {x: 0, y: 0, z: 0, w: 0}
+      SpawnPositionL: {fileID: 0}
+      RotationL: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1001 &798130892963038761
 PrefabInstance:
   m_ObjectHideFlags: 0
