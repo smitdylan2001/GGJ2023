@@ -8,7 +8,7 @@ public class TriggerHold : MonoBehaviour
     [SerializeField] private float timeRequired = 2;
     float timer;
     [SerializeField] UnityEvent holdEvent;
-    
+
     private void OnTriggerStay(Collider other)
     {
         timer += Time.deltaTime;

@@ -34,12 +34,9 @@ public class NoteManager : MonoBehaviour
     {
         Instance = this;
         NoteInfo = noteInfo;
-    }
 
-    private void Start()
-    {
         AvailableSpawnsR = possibleSpawnsR.ToList();
-        foreach(GameObject go in possibleSpawnsR) go.SetActive(false);
+        foreach (GameObject go in possibleSpawnsR) go.SetActive(false);
 
         AvailableSpawnsL = possibleSpawnsL.ToList();
         foreach (GameObject go in possibleSpawnsL) go.SetActive(false);
