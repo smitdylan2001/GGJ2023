@@ -69,6 +69,11 @@ public class NoteManager : MonoBehaviour
         }
     }
 
+    public void GoToNextScene()
+    {
+        currentScene++;
+    }
+
     private void SpawnObjectR(GameObject obj, Quaternion rot)
     {
         obj.SetActive(true);

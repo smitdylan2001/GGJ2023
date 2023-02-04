@@ -26,6 +26,8 @@ public class ScoreManager : MonoBehaviour
         Debug.Log(addition);
         Score += addition;
         UpdateScoreText();
+
+        if (Score >= 2000) NoteManager.Instance.GoToNextScene();
     }
 
     private void UpdateScoreText()
