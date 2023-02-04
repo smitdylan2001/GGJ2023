@@ -63,7 +63,7 @@ MonoBehaviour:
       RotationL: {x: 0, y: 0, z: 0}
     - SpawnPositionR: {fileID: 3455976904605663422}
       RotationR: {x: 78.642, y: -40.325, z: -97.978}
-      SpawnPositionL: {fileID: 3455976903999304970}
+      SpawnPositionL: {fileID: 3455976904418406044}
       RotationL: {x: 0, y: 0, z: -90}
   - Name: Triangle
     TimeSlices:
@@ -247,11 +247,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1734534181754650253, guid: 52a801a976b6b3f459d5da3e6f09e1c7, type: 3}
   m_PrefabInstance: {fileID: 798130892963038761}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3455976903999304970 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2658706520787055395, guid: 52a801a976b6b3f459d5da3e6f09e1c7, type: 3}
-  m_PrefabInstance: {fileID: 798130892963038761}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3455976904341437246 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2658706520969739543, guid: 52a801a976b6b3f459d5da3e6f09e1c7, type: 3}
@@ -260,6 +255,11 @@ GameObject:
 --- !u!1 &3455976904411642465 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2658706521167969352, guid: 52a801a976b6b3f459d5da3e6f09e1c7, type: 3}
+  m_PrefabInstance: {fileID: 798130892963038761}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3455976904418406044 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2658706521172732085, guid: 52a801a976b6b3f459d5da3e6f09e1c7, type: 3}
   m_PrefabInstance: {fileID: 798130892963038761}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &3455976905654760365 stripped
