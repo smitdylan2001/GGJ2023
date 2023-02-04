@@ -71,7 +71,7 @@ public class NoteManager : MonoBehaviour
 
     public void GoToNextScene()
     {
-        currentScene++;
+        currentScene = (currentScene + 1) % timelines.Slices.Length;
     }
 
     private void SpawnObjectR(GameObject obj, Quaternion rot)
