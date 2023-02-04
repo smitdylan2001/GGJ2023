@@ -27,7 +27,7 @@ public class Note : MonoBehaviour
 
     private void OnDisable()
     {
-        
+
     }
 
     // Update is called once per frame

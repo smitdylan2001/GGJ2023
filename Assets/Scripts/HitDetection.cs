@@ -20,9 +20,9 @@ public class HitDetection : MonoBehaviour
         if (angle < NoteManager.NoteInfo.MaxAngle)
         {
             var score = Mathf.Clamp((int)(Mathf.InverseLerp(NoteManager.NoteInfo.MaxAngle, 0, angle) * 100), 10, 100);
-
-            if (colliderTransform.GetComponentInParent<Note>().IsRight) NoteManager.Instance.ReturnObjectR(colliderTransform.gameObject, score);
-            else NoteManager.Instance.ReturnObjectL(colliderTransform.gameObject, score);
+            var note = colliderTransform.GetComponentInParent<Note>();
+            if (note.IsRight) NoteManager.Instance.ReturnObjectR(note.gameObject, score);
+            else NoteManager.Instance.ReturnObjectL(note.gameObject, score);
 
         }
     }
