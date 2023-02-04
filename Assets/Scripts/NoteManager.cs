@@ -9,6 +9,7 @@ public struct NoteInformation
     public float SpawnInterval;
     public float IndicatorDelay;
     public float MaxAngle;
+    public float RequiredPoints;
 }
 
 public class NoteManager : MonoBehaviour
@@ -19,16 +20,20 @@ public class NoteManager : MonoBehaviour
     [HideInInspector] public List<GameObject> AvailableSpawnsR = new List<GameObject>();
     [HideInInspector] public List<GameObject> AvailableSpawnsL = new List<GameObject>();
 
-    [SerializeField] NoteInformation _noteInfo;
+    [SerializeField] MoveTimeline timelines;
+    [SerializeField] NoteInformation noteInfo;
     [SerializeField] GameObject[] possibleSpawnsR;
     [SerializeField] GameObject[] possibleSpawnsL;
+    [SerializeField] GameObject[] allScenes;
 
+    int currentScene;
+    int currentBeat;
     float timer;
 
     private void Awake()
     {
         Instance = this;
-        NoteInfo = _noteInfo;
+        NoteInfo = noteInfo;
     }
 
     private void Start()
@@ -48,15 +53,19 @@ public class NoteManager : MonoBehaviour
         {
             timer = 0;
 
-            var item = GetRandomItem(AvailableSpawnsR.Count);
-            var rot = Random.rotation;
+            var slice = timelines.Slices[currentScene].TimeSlices[currentBeat];
 
-            if(AvailableSpawnsR.Count>0) SpawnObjectR(AvailableSpawnsR[item], rot);
+            var item = slice.SpawnPositionR;
+            var rot = slice.RotationR;
 
-            item = GetRandomItem(AvailableSpawnsL.Count);
-            rot = Random.rotation;
+            if(item) SpawnObjectR(item, rot);
 
-            if (AvailableSpawnsL.Count > 0) SpawnObjectL(AvailableSpawnsL[item], rot);
+            item = slice.SpawnPositionL;
+            rot = slice.RotationL;
+
+            if (item) SpawnObjectL(item, rot);
+
+            currentBeat++;
         }
     }
 

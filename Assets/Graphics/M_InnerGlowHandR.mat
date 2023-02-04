@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_GlowHand
+  m_Name: M_InnerGlowHandR
   m_Shader: {fileID: -6465566751694194690, guid: 7c2b2f50f9e48664aacd8dc9b2286e29, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords: []
@@ -34,12 +34,12 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _Fresnel_Strength: 2.16
+    - _Fresnel_Strength: 0
     - _QueueControl: 0
     - _QueueOffset: 0
     m_Colors:
-    - _Color: {r: 0, g: 0, b: 0, a: 0}
-    - _Fresnel_Color: {r: 1, g: 1, b: 1, a: 0}
+    - _Color: {r: 4.759382, g: 0, b: 0, a: 0}
+    - _Fresnel_Color: {r: 0, g: 0, b: 0, a: 0}
   m_BuildTextureStacks: []
 --- !u!114 &8075780809606364247
 MonoBehaviour:
