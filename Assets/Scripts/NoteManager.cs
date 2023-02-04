@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 [System.Serializable]
 public struct NoteInformation
@@ -25,10 +26,14 @@ public class NoteManager : MonoBehaviour
     [SerializeField] GameObject[] possibleSpawnsR;
     [SerializeField] GameObject[] possibleSpawnsL;
     [SerializeField] GameObject[] allScenes;
+    [SerializeField] Animator[] animators;
+    [SerializeField] Transform rightCurtain, leftCurtain;
 
     int currentScene;
     int currentBeat;
     float timer;
+    bool canPlay = true;
+    WaitForSeconds waitBeat;
 
     private void Awake()
     {
@@ -40,10 +45,14 @@ public class NoteManager : MonoBehaviour
 
         AvailableSpawnsL = possibleSpawnsL.ToList();
         foreach (GameObject go in possibleSpawnsL) go.SetActive(false);
+
+        waitBeat = new WaitForSeconds(NoteInfo.SpawnInterval);
     }
 
     void Update()
     {
+        if (!canPlay) return;
+
         timer += Time.deltaTime;
         if (timer >= NoteInfo.SpawnInterval)
         {
@@ -67,8 +76,56 @@ public class NoteManager : MonoBehaviour
 
     public void GoToNextScene()
     {
+        StartCoroutine(SceneSwitch());
+    }
+
+    IEnumerator SceneSwitch()
+    {
+        canPlay = false;
+
+        foreach (Animator ani in animators)
+        {
+            if (ani.gameObject) ani.SetTrigger("NextState");
+        }
+        yield return waitBeat;
+        yield return waitBeat;
+
+        float elapsedTime = 0;
+        var time = NoteInfo.SpawnInterval * 2;
+        //Move curtuns
+        while (elapsedTime < time)
+        {
+            var lstart = leftCurtain.position;
+            var rstart = rightCurtain.position;
+            var offset = new Vector3(2, 0, 0);
+            leftCurtain.position = Vector3.Lerp(lstart, lstart - (offset*-1), (elapsedTime / time));
+            rightCurtain.position = Vector3.Lerp(rstart, rstart - (offset*1), (elapsedTime / time));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        //switch states
         currentScene = (currentScene + 1) % timelines.Slices.Length;
         currentBeat = 0;
+        foreach (Animator ani in animators)
+        {
+            ani.SetTrigger("StartState");
+        }
+
+        elapsedTime = 0;
+        //Move curtuns
+        while (elapsedTime < time)
+        {
+            var lstart = leftCurtain.position;
+            var rstart = rightCurtain.position;
+            var offset = new Vector3(2, 0, 0);
+            leftCurtain.position = Vector3.Lerp(lstart, lstart - (offset * 1), (elapsedTime / time));
+            rightCurtain.position = Vector3.Lerp(rstart, rstart - (offset * -1), (elapsedTime / time));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+
+        canPlay = true;
     }
 
     private void SpawnObjectR(GameObject obj, Quaternion rot)
