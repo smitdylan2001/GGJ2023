@@ -8,7 +8,6 @@ public struct NoteInformation
 {
     public float SpawnInterval;
     public float IndicatorDelay;
-    public Vector2Int minMaxSpawnsPerInterval;
     public float MaxAngle;
 }
 
@@ -17,10 +16,12 @@ public class NoteManager : MonoBehaviour
     public static NoteManager Instance { get; private set; }
     public static NoteInformation NoteInfo { get; private set; }
 
-    [HideInInspector] public List<GameObject> AvailableSpawns = new List<GameObject>();
+    [HideInInspector] public List<GameObject> AvailableSpawnsR = new List<GameObject>();
+    [HideInInspector] public List<GameObject> AvailableSpawnsL = new List<GameObject>();
 
     [SerializeField] NoteInformation _noteInfo;
-    [SerializeField] GameObject[] possibleSpawns;
+    [SerializeField] GameObject[] possibleSpawnsR;
+    [SerializeField] GameObject[] possibleSpawnsL;
 
     float timer;
 
@@ -32,8 +33,11 @@ public class NoteManager : MonoBehaviour
 
     private void Start()
     {
-        AvailableSpawns = possibleSpawns.ToList();
-        foreach(GameObject go in possibleSpawns) go.SetActive(false);
+        AvailableSpawnsR = possibleSpawnsR.ToList();
+        foreach(GameObject go in possibleSpawnsR) go.SetActive(false);
+
+        AvailableSpawnsL = possibleSpawnsL.ToList();
+        foreach (GameObject go in possibleSpawnsL) go.SetActive(false);
     }
 
     // Update is called once per frame
@@ -44,27 +48,51 @@ public class NoteManager : MonoBehaviour
         {
             timer = 0;
 
-            for (int i = 0; i < GetRandomSpawnCount(NoteInfo.minMaxSpawnsPerInterval); i++)
-            {
-                var item = GetRandomItem(AvailableSpawns.Count);
-                var rot = Random.rotation;
+            var item = GetRandomItem(AvailableSpawnsR.Count);
+            var rot = Random.rotation;
 
-                SpawnObject(AvailableSpawns[item], rot);
-            }
+            if(AvailableSpawnsR.Count>0) SpawnObjectR(AvailableSpawnsR[item], rot);
+
+            item = GetRandomItem(AvailableSpawnsL.Count);
+            rot = Random.rotation;
+
+            if (AvailableSpawnsL.Count > 0) SpawnObjectL(AvailableSpawnsL[item], rot);
         }
     }
 
-    private void SpawnObject(GameObject obj, Quaternion rot)
+    private void SpawnObjectR(GameObject obj, Quaternion rot)
     {
         obj.SetActive(true);
-        obj.transform.rotation = rot;
-        AvailableSpawns.Remove(obj);
+        //obj.transform.rotation = rot;
+        AvailableSpawnsR.Remove(obj);
     }
 
-    public void ReturnObject(GameObject obj, float score = 0)
+    private void SpawnObjectL(GameObject obj, Quaternion rot)
+    {
+        obj.SetActive(true);
+       //obj.transform.rotation = rot;
+        AvailableSpawnsL.Remove(obj);
+    }
+
+    public void ReturnObjectR(GameObject obj, int score = 0)
     {
         obj.SetActive(false);
-        NoteManager.Instance.AvailableSpawns.Add(obj);
+        AvailableSpawnsR.Add(obj);
+
+        if (score > 0)
+        {
+            ScoreManager.Instance.AddScore(score);
+        }
+    }
+    public void ReturnObjectL(GameObject obj, int score = 0)
+    {
+        obj.SetActive(false);
+        AvailableSpawnsL.Add(obj);
+
+        if (score > 0)
+        {
+            ScoreManager.Instance.AddScore(score);
+        }
     }
 
     private static int GetRandomSpawnCount(Vector2Int range)

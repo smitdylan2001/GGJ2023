@@ -53,7 +53,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8676457533188413790, guid: f5c7e4627862a1145b6bbe3cb41368ab, type: 3}
       propertyPath: m_Name
-      value: PossibleHand
+      value: PossibleHand Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886478058719572668, guid: f5c7e4627862a1145b6bbe3cb41368ab, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886478058719572668, guid: f5c7e4627862a1145b6bbe3cb41368ab, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886478058719572668, guid: f5c7e4627862a1145b6bbe3cb41368ab, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886478058719572668, guid: f5c7e4627862a1145b6bbe3cb41368ab, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8886478058719572668, guid: f5c7e4627862a1145b6bbe3cb41368ab, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f5c7e4627862a1145b6bbe3cb41368ab, type: 3}

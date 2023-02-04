@@ -16,10 +16,14 @@ public class HitDetection : MonoBehaviour
 
     private void CheckObject(Transform colliderTransform)
     {
-        var angle = Quaternion.Angle(colliderTransform.rotation, transform.rotation);
+        var angle = Quaternion.Angle(colliderTransform.parent.rotation, transform.GetChild(0).rotation);
         if (angle < NoteManager.NoteInfo.MaxAngle)
         {
-            NoteManager.Instance.ReturnObject(colliderTransform.gameObject);
+            var score = (int)(Mathf.InverseLerp(NoteManager.NoteInfo.MaxAngle, 0, angle) * 100);
+
+            if (colliderTransform.GetComponentInParent<Note>().IsRight) NoteManager.Instance.ReturnObjectR(colliderTransform.gameObject, score);
+            else NoteManager.Instance.ReturnObjectL(colliderTransform.gameObject, score);
+
         }
     }
 }

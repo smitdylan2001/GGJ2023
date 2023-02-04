@@ -6,7 +6,7 @@ Texture2D:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: z__GradientRampTex{"mode":0,"colorKeys":[{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":0.0},{"color":{"r":1.0,"g":0.047946326434612277,"b":0.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}
+  m_Name: z__GradientRampTex{"mode":0,"colorKeys":[{"color":{"r":0.0,"g":0.0,"b":0.0,"a":1.0},"time":0.0},{"color":{"r":0.0,"g":0.266751766204834,"b":1.0,"a":1.0},"time":1.0}],"alphaKeys":[{"alpha":1.0,"time":0.0},{"alpha":1.0,"time":1.0}]}
   m_ImageContentsHash:
     serializedVersion: 2
     Hash: 00000000000000000000000000000000
@@ -41,7 +41,7 @@ Texture2D:
   m_ColorSpace: 1
   m_PlatformBlob: 
   image data: 1024
-  _typelessdata: ff000000ff010000ff020000ff030000ff040000ff050000ff060000ff070000ff080000ff090000ff0a0000ff0b0100ff0c0100ff0d0100ff0e0100ff0f0100ff100100ff110100ff120100ff130100ff140100ff150100ff160100ff170100ff180100ff190100ff1a0100ff1b0100ff1c0100ff1d0100ff1e0100ff1f0100ff200200ff210200ff220200ff230200ff240200ff250200ff260200ff270200ff280200ff290200ff2a0200ff2b0200ff2c0200ff2d0200ff2e0200ff2f0200ff300200ff310200ff320200ff330200ff340200ff350300ff360300ff370300ff380300ff390300ff3a0300ff3b0300ff3c0300ff3d0300ff3e0300ff3f0300ff400300ff410300ff420300ff430300ff440300ff450300ff460300ff470300ff480300ff490400ff4a0400ff4b0400ff4c0400ff4d0400ff4e0400ff4f0400ff500400ff510400ff520400ff530400ff540400ff550400ff560400ff570400ff580400ff590400ff5a0400ff5b0400ff5c0400ff5d0400ff5e0500ff5f0500ff600500ff610500ff620500ff630500ff640500ff650500ff660500ff670500ff680500ff690500ff6a0500ff6b0500ff6c0500ff6d0500ff6e0500ff6f0500ff700500ff710500ff720500ff730600ff740600ff750600ff760600ff770600ff780600ff790600ff7a0600ff7b0600ff7c0600ff7d0600ff7e0600ff7f0600ff800600ff810600ff820600ff830600ff840600ff850600ff860600ff870600ff880700ff890700ff8a0700ff8b0700ff8c0700ff8d0700ff8e0700ff8f0700ff900700ff910700ff920700ff930700ff940700ff950700ff960700ff970700ff980700ff990700ff9a0700ff9b0700ff9c0700ff9d0800ff9e0800ff9f0800ffa00800ffa10800ffa20800ffa30800ffa40800ffa50800ffa60800ffa70800ffa80800ffa90800ffaa0800ffab0800ffac0800ffad0800ffae0800ffaf0800ffb00800ffb10800ffb20900ffb30900ffb40900ffb50900ffb60900ffb70900ffb80900ffb90900ffba0900ffbb0900ffbc0900ffbd0900ffbe0900ffbf0900ffc00900ffc10900ffc20900ffc30900ffc40900ffc50900ffc60900ffc70a00ffc80a00ffc90a00ffca0a00ffcb0a00ffcc0a00ffcd0a00ffce0a00ffcf0a00ffd00a00ffd10a00ffd20a00ffd30a00ffd40a00ffd50a00ffd60a00ffd70a00ffd80a00ffd90a00ffda0a00ffdb0b00ffdc0b00ffdd0b00ffde0b00ffdf0b00ffe00b00ffe10b00ffe20b00ffe30b00ffe40b00ffe50b00ffe60b00ffe70b00ffe80b00ffe90b00ffea0b00ffeb0b00ffec0b00ffed0b00ffee0b00ffef0b00fff00c00fff10c00fff20c00fff30c00fff40c00fff50c00fff60c00fff70c00fff80c00fff90c00fffa0c00fffb0c00fffc0c00fffd0c00fffe0c00ffff0c00
+  _typelessdata: ff000000ff000001ff000102ff000103ff000104ff000105ff000206ff000207ff000208ff000209ff00030aff00030bff00030cff00030dff00040eff00040fff000410ff000511ff000512ff000513ff000514ff000615ff000616ff000617ff000618ff000719ff00071aff00071bff00071cff00081dff00081eff00081fff000920ff000921ff000922ff000923ff000a24ff000a25ff000a26ff000a27ff000b28ff000b29ff000b2aff000b2bff000c2cff000c2dff000c2eff000d2fff000d30ff000d31ff000d32ff000e33ff000e34ff000e35ff000e36ff000f37ff000f38ff000f39ff000f3aff00103bff00103cff00103dff00113eff00113fff001140ff001141ff001242ff001243ff001244ff001245ff001346ff001347ff001348ff001349ff00144aff00144bff00144cff00154dff00154eff00154fff001550ff001651ff001652ff001653ff001654ff001755ff001756ff001757ff001758ff001859ff00185aff00185bff00195cff00195dff00195eff00195fff001a60ff001a61ff001a62ff001a63ff001b64ff001b65ff001b66ff001b67ff001c68ff001c69ff001c6aff001d6bff001d6cff001d6dff001d6eff001e6fff001e70ff001e71ff001e72ff001f73ff001f74ff001f75ff001f76ff002077ff002078ff002079ff00217aff00217bff00217cff00217dff00227eff00227fff002280ff002281ff002382ff002383ff002384ff002385ff002486ff002487ff002488ff002589ff00258aff00258bff00258cff00268dff00268eff00268fff002690ff002791ff002792ff002793ff002794ff002895ff002896ff002897ff002998ff002999ff00299aff00299bff002a9cff002a9dff002a9eff002a9fff002ba0ff002ba1ff002ba2ff002ba3ff002ca4ff002ca5ff002ca6ff002da7ff002da8ff002da9ff002daaff002eabff002eacff002eadff002eaeff002fafff002fb0ff002fb1ff002fb2ff0030b3ff0030b4ff0030b5ff0031b6ff0031b7ff0031b8ff0031b9ff0032baff0032bbff0032bcff0032bdff0033beff0033bfff0033c0ff0033c1ff0034c2ff0034c3ff0034c4ff0035c5ff0035c6ff0035c7ff0035c8ff0036c9ff0036caff0036cbff0036ccff0037cdff0037ceff0037cfff0037d0ff0038d1ff0038d2ff0038d3ff0039d4ff0039d5ff0039d6ff0039d7ff003ad8ff003ad9ff003adaff003adbff003bdcff003bddff003bdeff003bdfff003ce0ff003ce1ff003ce2ff003de3ff003de4ff003de5ff003de6ff003ee7ff003ee8ff003ee9ff003eeaff003febff003fecff003fedff003feeff0040efff0040f0ff0040f1ff0041f2ff0041f3ff0041f4ff0041f5ff0042f6ff0042f7ff0042f8ff0042f9ff0043faff0043fbff0043fcff0043fdff0044feff0044ff
   m_StreamData:
     serializedVersion: 2
     offset: 0
@@ -67,17 +67,18 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: M_FoamHand
+  m_Name: M_FoamHand_L
   m_Shader: {fileID: 4800000, guid: 2a230514c860643f69b6a4d1871d3825, type: 3}
   m_ValidKeywords:
   - DR_OUTLINE_ON
   - _DETAILMAPBLENDINGMODE_MULTIPLY
   - _EMISSION
-  - _NORMALMAP
+  - _RECEIVE_SHADOWS_OFF
   - _TEXTUREBLENDINGMODE_MULTIPLY
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - _RECEIVESHADOWS_OFF
   m_LightmapFlags: 2
-  m_EnableInstancingVariants: 0
+  m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: 2000
   stringTagMap:
@@ -91,11 +92,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BaseMap:
-        m_Texture: {fileID: 2800000, guid: 159c58c02cb7ec54c8ae2564d6ca6f91, type: 3}
+        m_Texture: {fileID: 2800000, guid: 3de71445fa9d078498bfa9a6bcef7fc6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: de54f9ef17a5ab747a5c57687716e9e7, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -197,7 +198,7 @@ Material:
     - _OverrideLightmapDir: 0
     - _Parallax: 0.005
     - _QueueOffset: 0
-    - _ReceiveShadows: 1
+    - _ReceiveShadows: 0
     - _RimEnabled: 0
     - _SelfShadingSize: 0
     - _Smoothness: 0.5
