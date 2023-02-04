@@ -67,22 +67,22 @@ MonoBehaviour:
       RotationL: {x: 0, y: 0, z: -90}
   - Name: Triangle
     TimeSlices:
-    - SpawnPositionR: {fileID: 3455976905602963057}
+    - SpawnPositionR: {fileID: 0}
+      RotationR: {x: 0, y: 0, z: 0}
+      SpawnPositionL: {fileID: 3455976904292989990}
+      RotationL: {x: -10, y: -90, z: -90}
+    - SpawnPositionR: {fileID: 3455976905771551498}
       RotationR: {x: 10, y: -90, z: -90}
       SpawnPositionL: {fileID: 0}
       RotationL: {x: 0, y: 0, z: 0}
     - SpawnPositionR: {fileID: 3455976905771551498}
       RotationR: {x: 4.417, y: -51.762, z: -58.223}
-      SpawnPositionL: {fileID: 3455976905654760365}
+      SpawnPositionL: {fileID: 0}
       RotationL: {x: 72.449, y: 38.825, z: 0}
     - SpawnPositionR: {fileID: 3455976904210681093}
       RotationR: {x: 69.339, y: 74.597, z: 127.566}
       SpawnPositionL: {fileID: 3455976904750304357}
       RotationL: {x: 87.114, y: 165.364, z: 125.393}
-    - SpawnPositionR: {fileID: 0}
-      RotationR: {x: 0, y: 0, z: 0}
-      SpawnPositionL: {fileID: 3455976904292989990}
-      RotationL: {x: -10, y: -90, z: -90}
   - Name: Table Climb
     TimeSlices:
     - SpawnPositionR: {fileID: 3455976904878033838}
@@ -467,11 +467,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2658706521378736716, guid: 52a801a976b6b3f459d5da3e6f09e1c7, type: 3}
   m_PrefabInstance: {fileID: 798130892963038761}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &3455976905654760365 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2658706522352301444, guid: 52a801a976b6b3f459d5da3e6f09e1c7, type: 3}
-  m_PrefabInstance: {fileID: 798130892963038761}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &3455976905730445768 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 2658706522528782305, guid: 52a801a976b6b3f459d5da3e6f09e1c7, type: 3}
@@ -607,31 +602,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6028624133465427103, guid: 1a7d88a18a73b17419ed392cb9194658, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.7936456
+      value: 0.7812035
       objectReference: {fileID: 0}
     - target: {fileID: 6028624133465427103, guid: 1a7d88a18a73b17419ed392cb9194658, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.24249932
+      value: 0.17847762
       objectReference: {fileID: 0}
     - target: {fileID: 6028624133465427103, guid: 1a7d88a18a73b17419ed392cb9194658, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.36421102
+      value: -0.43080822
       objectReference: {fileID: 0}
     - target: {fileID: 6028624133465427103, guid: 1a7d88a18a73b17419ed392cb9194658, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.42269498
+      value: -0.41505554
       objectReference: {fileID: 0}
     - target: {fileID: 6028624133465427103, guid: 1a7d88a18a73b17419ed392cb9194658, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 4.417
+      value: -4.518
       objectReference: {fileID: 0}
     - target: {fileID: 6028624133465427103, guid: 1a7d88a18a73b17419ed392cb9194658, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -51.762
+      value: -55.468
       objectReference: {fileID: 0}
     - target: {fileID: 6028624133465427103, guid: 1a7d88a18a73b17419ed392cb9194658, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: -58.223
+      value: -53.588
       objectReference: {fileID: 0}
     - target: {fileID: 6028624133499212260, guid: 1a7d88a18a73b17419ed392cb9194658, type: 3}
       propertyPath: m_LocalRotation.w
@@ -795,11 +790,6 @@ GameObject:
 --- !u!1 &3455976905188789268 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6404726811333316923, guid: 1a7d88a18a73b17419ed392cb9194658, type: 3}
-  m_PrefabInstance: {fileID: 8580537850507435311}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &3455976905602963057 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6404726810698910558, guid: 1a7d88a18a73b17419ed392cb9194658, type: 3}
   m_PrefabInstance: {fileID: 8580537850507435311}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &3455976905660776092 stripped
