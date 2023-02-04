@@ -6,11 +6,20 @@ public class HitDetection : MonoBehaviour
 {
     private void OnTriggerEnter(Collider other)
     {
-        Destroy(other.gameObject);
+        CheckObject(other.transform);
     }
 
     private void OnTriggerStay(Collider other)
     {
-        
+        CheckObject(other.transform);
+    }
+
+    private void CheckObject(Transform colliderTransform)
+    {
+        var angle = Quaternion.Angle(colliderTransform.rotation, transform.rotation);
+        if (angle < NoteManager.NoteInfo.MaxAngle)
+        {
+            NoteManager.Instance.ReturnObject(colliderTransform.gameObject);
+        }
     }
 }
