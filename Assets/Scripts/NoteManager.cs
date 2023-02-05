@@ -28,11 +28,12 @@ public class NoteManager : MonoBehaviour
     [SerializeField] GameObject[] allScenes;
     [SerializeField] Animator[] animators;
     [SerializeField] Transform rightCurtain, leftCurtain;
+    [SerializeField] GameObject[] sceneSwitch;
 
     int currentScene;
     int currentBeat;
     float timer;
-    bool canPlay = true;
+    public bool canPlay = false;
     WaitForSeconds waitBeat;
 
     private void Awake()
@@ -47,6 +48,9 @@ public class NoteManager : MonoBehaviour
         foreach (GameObject go in possibleSpawnsL) go.SetActive(false);
 
         waitBeat = new WaitForSeconds(NoteInfo.SpawnInterval);
+
+        leftCurtain.position += new Vector3(2, 0, 0);
+        rightCurtain.position += new Vector3(-2, 0, 0);
     }
 
     void Update()
@@ -88,23 +92,18 @@ public class NoteManager : MonoBehaviour
             if (ani.gameObject) ani.SetTrigger("NextState");
         }
         yield return waitBeat;
-        yield return waitBeat;
 
-        float elapsedTime = 0;
-        var time = NoteInfo.SpawnInterval * 2;
-        //Move curtuns
-        while (elapsedTime < time)
+        if(currentScene == 2)
         {
-            var lstart = leftCurtain.position;
-            var rstart = rightCurtain.position;
-            var offset = new Vector3(2, 0, 0);
-            leftCurtain.position = Vector3.Lerp(lstart, lstart - (offset*-1), (elapsedTime / time));
-            rightCurtain.position = Vector3.Lerp(rstart, rstart - (offset*1), (elapsedTime / time));
-            elapsedTime += Time.deltaTime;
-            yield return null;
+            foreach (GameObject go in sceneSwitch) go.SetActive(go.activeSelf);
         }
 
+        yield return waitBeat;
+
+        yield return CloseCurtains();
+
         //switch states
+        
         allScenes[currentScene % allScenes.Length].SetActive(false);
         currentScene = (currentScene + 1) % timelines.Slices.Length;
         currentBeat = 0;
@@ -114,7 +113,36 @@ public class NoteManager : MonoBehaviour
         }
         allScenes[currentScene % allScenes.Length].SetActive(true);
 
-        elapsedTime = 0;
+        yield return OpenCurtains();
+        
+        if (currentScene == 3)
+        {
+            foreach (GameObject go in sceneSwitch) go.SetActive(go.activeSelf);
+        }
+        canPlay = true;
+    }
+
+    public IEnumerator CloseCurtains() 
+    {
+        float elapsedTime = 0;
+        var time = NoteInfo.SpawnInterval * 2;
+        //Move curtuns
+        while (elapsedTime < time)
+        {
+            var lstart = leftCurtain.position;
+            var rstart = rightCurtain.position;
+            var offset = new Vector3(2, 0, 0);
+            leftCurtain.position = Vector3.Lerp(lstart, lstart - (offset * -1), (elapsedTime / time));
+            rightCurtain.position = Vector3.Lerp(rstart, rstart - (offset * 1), (elapsedTime / time));
+            elapsedTime += Time.deltaTime;
+            yield return null;
+        }
+    }
+
+    public IEnumerator OpenCurtains()
+    {
+        float elapsedTime = 0;
+        var time = NoteInfo.SpawnInterval * 2;
         //Move curtuns
         while (elapsedTime < time)
         {
@@ -126,8 +154,6 @@ public class NoteManager : MonoBehaviour
             elapsedTime += Time.deltaTime;
             yield return null;
         }
-
-        canPlay = true;
     }
 
     private void SpawnObjectR(GameObject obj, Quaternion rot)
