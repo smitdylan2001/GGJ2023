@@ -9,6 +9,8 @@ public class ScoreManager : MonoBehaviour
     public int Score { get; private set; }  
 
     [SerializeField] private TMP_Text rHandText, lHandText, endText, endText2;
+    [SerializeField] private AudioSource cheerAudio;
+    [SerializeField] private AudioClip[] cheerClips;
     int multiplier = 1;
 
     int perfect, good;
@@ -44,6 +46,11 @@ public class ScoreManager : MonoBehaviour
         {
             NoteManager.Instance.GoToNextScene();
             multiplier++;
+        }
+        else if(Score >= 1000)
+        {
+            cheerAudio.clip = cheerClips[Random.Range(0, cheerClips.Length)];
+            cheerAudio.Play();
         }
     }
 
