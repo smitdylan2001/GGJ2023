@@ -14,6 +14,7 @@ public class ScoreManager : MonoBehaviour
     int multiplier = 1;
 
     int perfect, good;
+    int tempScore;
 
     private void Awake()
     {
@@ -47,10 +48,13 @@ public class ScoreManager : MonoBehaviour
             NoteManager.Instance.GoToNextScene();
             multiplier++;
         }
-        else if(Score >= 1000 * multiplier)
+
+        tempScore += addition;
+        if(tempScore >= 1000)
         {
             cheerAudio.clip = cheerClips[Random.Range(0, cheerClips.Length)];
             cheerAudio.Play();
+            tempScore = 0;
         }
     }
 
