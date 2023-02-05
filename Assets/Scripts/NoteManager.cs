@@ -29,6 +29,8 @@ public class NoteManager : MonoBehaviour
     [SerializeField] Animator[] animators;
     [SerializeField] Transform rightCurtain, leftCurtain;
     [SerializeField] GameObject[] sceneSwitch;
+    [SerializeField] AudioSource rightCurtainAudio, leftCurtainAudio, completeAudioSource;
+    [SerializeField] AudioClip cashierClip, triangleClip, climbClip;
 
     int currentScene;
     int currentBeat;
@@ -87,6 +89,21 @@ public class NoteManager : MonoBehaviour
     {
         canPlay = false;
 
+        switch (currentScene)
+        {
+            case 0:
+                completeAudioSource.clip = cashierClip;
+                break;
+            case 1:
+                completeAudioSource.clip = triangleClip;
+                break;
+            case 2:
+                completeAudioSource.clip = climbClip;
+                break;
+        }
+
+        completeAudioSource.Play();
+
         foreach (Animator ani in animators)
         {
             if (ani.gameObject) ani.SetTrigger("NextState");
@@ -95,7 +112,7 @@ public class NoteManager : MonoBehaviour
 
         if(currentScene == 2)
         {
-            foreach (GameObject go in sceneSwitch) go.SetActive(go.activeSelf);
+            foreach (GameObject go in sceneSwitch) go.SetActive(!go.activeSelf);
         }
 
         yield return waitBeat;
@@ -115,22 +132,24 @@ public class NoteManager : MonoBehaviour
 
         yield return OpenCurtains();
         
-        if (currentScene == 3)
+        if (currentScene == 0)
         {
-            foreach (GameObject go in sceneSwitch) go.SetActive(go.activeSelf);
+            foreach (GameObject go in sceneSwitch) go.SetActive(!go.activeSelf);
         }
         canPlay = true;
     }
 
-    public IEnumerator CloseCurtains() 
+    public IEnumerator CloseCurtains()
     {
         float elapsedTime = 0;
         var time = NoteInfo.SpawnInterval * 2;
+        var lstart = leftCurtain.position;
+        var rstart = rightCurtain.position;
+        rightCurtainAudio.Play();
+        leftCurtainAudio.Play();
         //Move curtuns
         while (elapsedTime < time)
         {
-            var lstart = leftCurtain.position;
-            var rstart = rightCurtain.position;
             var offset = new Vector3(2, 0, 0);
             leftCurtain.position = Vector3.Lerp(lstart, lstart - (offset * -1), (elapsedTime / time));
             rightCurtain.position = Vector3.Lerp(rstart, rstart - (offset * 1), (elapsedTime / time));
@@ -143,11 +162,13 @@ public class NoteManager : MonoBehaviour
     {
         float elapsedTime = 0;
         var time = NoteInfo.SpawnInterval * 2;
+        var lstart = leftCurtain.position;
+        var rstart = rightCurtain.position;
+        rightCurtainAudio.Play();
+        leftCurtainAudio.Play();
         //Move curtuns
         while (elapsedTime < time)
         {
-            var lstart = leftCurtain.position;
-            var rstart = rightCurtain.position;
             var offset = new Vector3(2, 0, 0);
             leftCurtain.position = Vector3.Lerp(lstart, lstart - (offset * 1), (elapsedTime / time));
             rightCurtain.position = Vector3.Lerp(rstart, rstart - (offset * -1), (elapsedTime / time));

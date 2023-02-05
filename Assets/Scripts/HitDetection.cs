@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HitDetection : MonoBehaviour
 {
+    [SerializeField] GameObject goodVFX, perfectVFX;
+
     private void OnTriggerEnter(Collider other)
     {
         CheckObject(other.transform);
@@ -23,6 +25,15 @@ public class HitDetection : MonoBehaviour
             var note = colliderTransform.GetComponentInParent<Note>();
             if (note.IsRight) NoteManager.Instance.ReturnObjectR(note.gameObject, score);
             else NoteManager.Instance.ReturnObjectL(note.gameObject, score);
+
+            if (score > NoteManager.NoteInfo.MaxAngle / 2)
+            {
+                Instantiate(perfectVFX, transform.position, transform.rotation);
+            }
+            else
+            {
+                Instantiate(goodVFX, transform.position, transform.rotation);
+            }
         }
     }
 }
