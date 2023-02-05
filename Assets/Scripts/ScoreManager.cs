@@ -47,7 +47,7 @@ public class ScoreManager : MonoBehaviour
             NoteManager.Instance.GoToNextScene();
             multiplier++;
         }
-        else if(Score >= 1000)
+        else if(Score >= 1000 * multiplier)
         {
             cheerAudio.clip = cheerClips[Random.Range(0, cheerClips.Length)];
             cheerAudio.Play();
