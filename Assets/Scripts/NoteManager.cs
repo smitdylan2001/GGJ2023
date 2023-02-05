@@ -31,6 +31,7 @@ public class NoteManager : MonoBehaviour
     [SerializeField] GameObject[] sceneSwitch;
     [SerializeField] AudioSource rightCurtainAudio, leftCurtainAudio, completeAudioSource;
     [SerializeField] AudioClip cashierClip, triangleClip, climbClip;
+    [SerializeField] GameObject confetti;
 
     int currentScene;
     int currentBeat;
@@ -102,6 +103,8 @@ public class NoteManager : MonoBehaviour
                 break;
         }
 
+        confetti.SetActive(true);
+
         completeAudioSource.Play();
 
         foreach (Animator ani in animators)
@@ -136,6 +139,7 @@ public class NoteManager : MonoBehaviour
         {
             foreach (GameObject go in sceneSwitch) go.SetActive(!go.activeSelf);
         }
+        confetti.SetActive(false);
         canPlay = true;
     }
 
