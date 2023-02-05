@@ -8,8 +8,11 @@ public class ScoreManager : MonoBehaviour
     public static ScoreManager Instance { get; private set; }
     public int Score { get; private set; }  
 
-    [SerializeField] private TMP_Text rHandText, lHandText, endText;
+    [SerializeField] private TMP_Text rHandText, lHandText, endText, endText2;
     int multiplier = 1;
+
+    int perfect, good;
+
     private void Awake()
     {
         Instance= this;
@@ -25,6 +28,16 @@ public class ScoreManager : MonoBehaviour
     {
         Debug.Log(addition);
         Score += addition;
+
+        if(addition > NoteManager.NoteInfo.MaxAngle / 2)
+        {
+            perfect++;
+        }
+        else
+        {
+            good++;
+        }
+
         UpdateScoreText();
 
         if (Score >= 2000 * multiplier)
@@ -39,6 +52,12 @@ public class ScoreManager : MonoBehaviour
         var text = Score.ToString();
         rHandText.text = text;
         lHandText.text = text;
+    }
+
+    public void UpdateEndText()
+    {
+        var text = Score.ToString();
         endText.text = "SCORE:\n" + text + "\n\nRESTART";
+        endText2.text = "GOOD: " + good.ToString() + " | PERFECT:" + perfect.ToString();
     }
 }

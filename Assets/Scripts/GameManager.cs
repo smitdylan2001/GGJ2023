@@ -22,12 +22,16 @@ public class GameManager : MonoBehaviour
     IEnumerator PlayGame()
     {
         var time = audioSource.clip.length;
-
-        NoteManager.Instance.enabled = true;
+        NoteManager.Instance.StartCoroutine(NoteManager.Instance.OpenCurtains());
+        NoteManager.Instance.canPlay = true;
         audioSource.Play();
         yield return new WaitForSeconds(time);
 
-        NoteManager.Instance.enabled = false;
+        NoteManager.Instance.canPlay = false;
+        NoteManager.Instance.StopAllCoroutines();
+        NoteManager.Instance.StartCoroutine(NoteManager.Instance.CloseCurtains());
+        ScoreManager.Instance.UpdateEndText();
+
         endScreen.SetActive(true);
     }
 }
