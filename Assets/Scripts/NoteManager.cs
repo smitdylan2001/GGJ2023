@@ -105,12 +105,14 @@ public class NoteManager : MonoBehaviour
         }
 
         //switch states
+        allScenes[currentScene % allScenes.Length].SetActive(false);
         currentScene = (currentScene + 1) % timelines.Slices.Length;
         currentBeat = 0;
         foreach (Animator ani in animators)
         {
             ani.SetTrigger("StartState");
         }
+        allScenes[currentScene % allScenes.Length].SetActive(true);
 
         elapsedTime = 0;
         //Move curtuns

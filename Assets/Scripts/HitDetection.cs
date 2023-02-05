@@ -23,7 +23,6 @@ public class HitDetection : MonoBehaviour
             var note = colliderTransform.GetComponentInParent<Note>();
             if (note.IsRight) NoteManager.Instance.ReturnObjectR(note.gameObject, score);
             else NoteManager.Instance.ReturnObjectL(note.gameObject, score);
-
         }
     }
 }
